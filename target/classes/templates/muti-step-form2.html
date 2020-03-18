@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+<head>
+<title></title>
+<meta content="noindex, nofollow" name="robots">
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/resources/css/multi-step.css}">
+
+</head>
+<body>
+<div layout:fragment="content"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<p>Payment Methods</p>
+				<input type="checkbox"> <i>Bank</i> <br /> <input
+					type="checkbox"> <i>Bank</i> <br /> <input type="checkbox">
+				<i>Bank</i> <br />
+			</div>
+			<div class="col-6">
+				<h2>Payment Methods</h2>
+				<input type="checkbox"> <i class="p-2">Bank</i>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

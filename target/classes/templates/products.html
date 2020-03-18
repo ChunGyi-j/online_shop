@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+<head>
+<meta charset="UTF-8">
+<title>Layout</title>
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{resources/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{resources/css/shopPage.css}">
+<link rel="stylesheet" th:href="@{/resources/css/slick.css}">
+<link rel="stylesheet" th:href="@{/resources/css/slick-theme.css}">
+
+
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="my-4">j</div>
+		<div class="container">
+			<div class="row">
+				<div class="card  my-2 mx-2"   style="width: 22.5rem;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img th:src="@{resources/images/product-img1.jpg}"
+								class="card-img" alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card  my-2 mx-2"  style="width: 22.5rem;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img th:src="@{resources/images/product-img2.jpg}" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card  my-2 p-0 mx-2" style="width: 22.5rem;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img th:src="@{resources/images/product-img3.jpg}" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card  my-2 p-0 mx-2" style="width: 22.5rem;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img th:src="@{resources/images/product-img5.jpg}" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card my-2 p-0 mx-2" style="width: 22.5rem;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img th:src="@{resources/images/product-img6.jpg}" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card my-2 p-0 mx-2" style="width: 22.5rem;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img th:src="@{resources/images/product-img7.jpg}" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	//-->
+
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/jquery.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/slick.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/common.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/popper.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+	<title layout:title-pattern="$LAYOUT_TITLE | $CONTENT_TITLE" >Online Shop</title>
+
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{resources/css/font-awesome.min.css}">
+
+<link rel="stylesheet" th:href="@{resources/css/headerStyle.css}">
+
+</head>
+<body>
+	<div class="top nav navbar-nave justify-content-between fixed-top ">
+		<div class="nav-item search-box">
+			<input class="search-txt" type="text" name=""
+				placeholder="Type to search"> <a class="search-btn" href="#">
+				<i class="fa fa-search"></i>
+			</a>
+		</div>
+		<div id="text1" class="nav-item"></div>
+		<nav class="nav">
+			<h1 class="mr-4 mt-0">
+				<a class="text-decoration-none" th:href="@{/}"><i
+					style="color: rebeccapurple">M<span style="color: #1e7e34">ba</span>y
+				</i> </a>
+			</h1>
+
+			<ul>
+				<li class="font-weight-bold ml-5"><a
+					class="text-decoration-none" th:href="@{/createshop}">CreateShop</a></li>
+				<li class="font-weight-bold"><a class="text-decoration-none"
+					th:href="@{/additem}">Sell</a></li>
+				<li class="font-weight-bold"><a class="text-decoration-none"
+					th:href="@{/sign}">Have Account?</a></li>
+				<li class="font-weight-bold mr-5"><a
+					class="text-decoration-none" th:href="@{/cart}"><span
+						class="fa fa-shopping-cart"></span>Cart</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div layout:fragment="content"></div>
+
+	<footer class="footer">
+		<div class="footer-area py-3">
+			<div class="container ">
+				<div class="row section_gap">
+					<div class="col-lg-3 col-md-6 col-sm-6 text-center">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title large_title text-dark my-4">Online
+								Shop</h4>
+							<p>So seed seed green that winged cattle in. Gathering thing
+								made fly you're no divided deep moved us lan Gathering thing us
+								land years living.</p>
+							<p>So seed seed green that winged cattle in. Gathering thing
+								made fly you're no divided deep moved</p>
+						</div>
+					</div>
+					<div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6 text-center">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title text-dark my-4">Quick Links</h4>
+							<ul class="list">
+								<li><a class="text-decoration-none"
+									th:href="@{/createshop}">CreateShop</a></li>
+								<li><a class="text-decoration-none" th:href="@{/additem}">Sell</a></li>
+								<li><a class="text-decoration-none" th:href="@{/sign}">Have
+										Account?</a></li>
+								<li><a class="text-decoration-none" th:href="@{/cart}"><span
+										class="fa fa-shopping-cart"></span>Cart</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6 text-center">
+						<div class="single-footer-widget instafeed">
+							<h4 class="footer_title text-dark my-4">PopularProducts</h4>
+							<div class="row">
+								<div class="col-md-6 mb-2">
+									<img th:src="@{/resources/images/z.jpg}" class="card-img"
+										alt="...">
+								</div>
+								<div class="col-md-6 mb-2">
+									<img th:src="@{/resources/images/z.jpg}" class="card-img"
+										alt="...">
+								</div>
+								<div class="col-md-6 ">
+									<img th:src="@{/resources/images/z.jpg}" class="card-img"
+										alt="...">
+								</div>
+								<div class="col-md-6 ">
+									<img th:src="@{/resources/images/z.jpg}" class="card-img"
+										alt="...">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6 text-center">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title text-dark my-4 ">Contact Us</h4>
+							<div class="ml-40">
+								<p class="sm-head">
+									<span class="fa fa-location-arrow text-primary"></span> Head
+									Office
+								</p>
+								<p>123, Main Street, Your City</p>
+
+								<p class="sm-head">
+									<span class="fa fa-phone text-primary"></span> Phone Number
+								</p>
+								<p>
+									+123 456 7890 <br> +123 456 7890
+								</p>
+
+								<p class="sm-head">
+									<span class="fa fa-envelope text-primary"></span> Email
+								</p>
+								<p>
+									free@infoexample.com <br> www.infoexample.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row d-flex text-light py-3">
+					<p class="col-lg-12 footer-text text-center">
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script>.
+						<script>document.write(new Date().getMonth());</script>.
+						<script>document.write(new Date().getDate());</script>.
+						All rights reserved
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/jquery.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/slick.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/common.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/popper.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/jquery-ui.min.js}"></script>
+	<script type="text/javascript" defer
+		th:src="@{/resources/js/cart-scripts.js}"></script>
+</body>
+</html>
