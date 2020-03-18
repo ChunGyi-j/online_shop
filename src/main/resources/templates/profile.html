@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <style>
+            .container{
+                height: 70%;
+                width: 70%;
+                padding: 15px;
+                margin-top: 60px;
+            }
+            .profilePic{
+                height: 150px;
+                width: 150px;
+                border-radius: 150px;
+                margin-top: 45px;
+                
+            }
+            .input-group{
+                margin: 10px;
+                
+            }
+            input{
+                margin: 20px;
+            }
+            .overlay {
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            width: 100%;
+	            height: 100%;
+	            background: rgba(0, 0, 0, 0);
+                transition: background 0.5s ease;
+            }
+            .user-name{
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    margin-left: 10px;
+                }
+            .profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+            .textarea{
+                margin-top: 45px
+            }
+        </style>
+    </head>
+    <body>
+    <div layout:fragment="content">
+        <div class="container border border-dark">
+           <div class="row">
+               <div class="col-3">
+                   <img src="khant.jpg" alt="..." class="profilePic">
+                   <div class="profile-usertitle">
+					<div class="user-name">
+						State your name here.
+					</div>
+					
+					
+				</div>
+           <div class="profile-buttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div>
+            <div class="profile-usermenu">
+					<ul class="nav">
+						<li >
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Shop </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Account Settings </a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							Kyite tr yay </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Kyite tr yay 2 </a>
+						</li>
+					</ul>
+				</div>
+               </div>
+               <div class="col-9">
+                   
+                    
+                   <textarea name="" id="" cols="100" rows="20" class="textarea">
+                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit architecto, hic voluptatem tempore laudantium porro eius ad beatae harum consectetur facilis placeat temporibus, consequuntur eaque doloribus odit non nesciunt asperiores.</span>
+                       <span>Iste hic necessitatibus nihil modi odit optio facilis quia, saepe similique praesentium iusto assumenda labore ipsam nulla. Tempora itaque, repellat earum repellendus soluta quam suscipit eaque culpa! Nisi, quae sunt?</span>
+                       <span>Consequatur a, id quis quas, error qui molestias doloremque perspiciatis reiciendis officiis debitis nihil, iure esse aliquid ipsa inventore repudiandae at? Perferendis, voluptatum quo labore illum. Tempora velit sequi debitis?</span>
+                       <span>Harum accusantium quisquam atque! At molestiae ab quae, fuga, perferendis, ipsam quis molestias reprehenderit iure unde iusto! Saepe excepturi quam consequuntur veritatis, voluptates voluptatibus dolor distinctio reiciendis, incidunt veniam nihil.</span>
+                       <span>Placeat qui sit nesciunt iste numquam hic consequuntur aperiam, molestias magnam commodi cum error fuga animi debitis eos tempore, minus nobis ut similique. Obcaecati aperiam, rem quos temporibus sed laboriosam?</span>
+                       <span>Eveniet quo maxime ipsum hic saepe, officia quisquam blanditiis quod maiores dolorem. Maiores itaque culpa asperiores nisi repudiandae? Assumenda aliquid repellendus illo quo necessitatibus cupiditate blanditiis ab. Aliquam, quisquam, repellat.</span>
+                       <span>Impedit obcaecati placeat porro nihil natus asperiores officia praesentium harum nulla saepe maxime doloremque facere corporis eum, repellendus qui. Incidunt, aut omnis quos nemo dolores dignissimos nihil esse accusantium magnam.</span>
+                       <span>Et tempore commodi, sapiente adipisci exercitationem dignissimos mollitia beatae quod repellendus libero. Quod aspernatur, et ullam officiis dolorem nulla beatae, animi necessitatibus. Nam aliquam fugiat voluptas odio reprehenderit recusandae quisquam!</span>
+                       <span>Quas exercitationem cupiditate inventore minima nam aspernatur asperiores reiciendis quo blanditiis facere iure labore veniam voluptatum sint optio eveniet at maiores itaque iste dolore assumenda, architecto amet temporibus ullam ad.</span>
+                       <span>Reprehenderit quam officia adipisci officiis eligendi! Reprehenderit, culpa veniam! Error quas facere id aut ipsum, quibusdam quia, ab dicta provident cumque eveniet ullam odit, qui, ipsa esse suscipit commodi repellat.</span>
+                   </textarea>
+               </div>
+           </div>
+            </div>
+        </div>
+    </body>
+</html>

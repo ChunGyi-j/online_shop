@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign</title>
+
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/resources/css/style.css}">
+</head>
+<body >
+	<div layout:fragment="content">
+		<div class="hero">
+			<div class="form-box">
+				<div class="button-box">
+					<div id="btn"></div>
+					<div class="toggle-btn">
+						<a type="button" onclick="login()">LogIn</a> <a type="button"
+							onclick="register()"><i class="mr-5"><i class="mr-1"></i></i>Register</a>
+					</div>
+				</div>
+				<form id="login" th:action="@{/login}" class="input-group">
+					<input type="text" class="input-field" placeholder="User Name"
+						required> <input type="text" class="input-field"
+						placeholder="Enter Password" required>
+						
+					<button type="submit" class="submit-btn mt-4">Log In</button>
+				</form>
+				<form id="register" th:action="@{/register}" class="input-group">
+					<input type="text" class="input-field"
+						placeholder="Enter User Name" required> <input type="text"
+						class="input-field" placeholder="Enter Email" required> <input
+						type="text" class="input-field" placeholder="Enter Password"
+						required><input type="text" class="input-field"
+						placeholder="Enter Confirm-Password" required>
+					<button type="submit" class="submit-btn mt-4">Register</button>
+				</form>
+			</div>
+		</div>
+		
+		<script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+            
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "900px";
+                z.style.left = "0px";
+            }
+        </script>
+	</div>
+</body>
+</html>

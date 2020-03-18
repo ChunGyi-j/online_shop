@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+<head>
+<title>Checkout Page</title>
+<!-- Font Awesome, Style -->
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/resources/css/checkout.css}">
+</head>
+<body>
+	<!-- Checkout Start -->
+	<div layout:fragment="content">
+		<div class="checkout">
+			<div class="container my-4">
+				<div class="row">
+					<div class="col-8">
+						<h2>Your Order</h2>
+						<!-- Checkout Inner Start -->
+						<div class="checkout-inner">
+							<form>
+								<div class="checkout-form-steps">
+									<h4>Personal Detail</h4>
+									<input type="text" class="textfield" placeholder="Your Name"
+										required="required"> <input type="email"
+										class="textfield" placeholder="Your Email"> <input
+										type="text" class="textfield" placeholder="Your Phone No.">
+								</div>
+								<div class="checkout-form-steps">
+									<h4>Shipping Address(Only Available in Yangon)</h4>
+									<select class="textfield">
+										<option>Select TownShip</option>
+										<option>SanChaung</option>
+										<option>KaMar Yut</option>
+										<option>KyiMyint Tine</option>
+									</select> <select class="textfield">
+										<option>Select Street</option>
+										<option>Street 1</option>
+										<option>Street 2</option>
+										<option>Street 3</option>
+									</select> <input type="text" class="textfield"
+										placeholder="Full Address">
+								</div>
+								<div class="checkout-form-steps">
+									<h4>Shipping Options</h4>
+									<label for="radio1"> <input type="radio"
+										name="shippingoptions" id="radio1"> Regular Delivery
+									</label> <label for="radio2"> <input type="radio"
+										name="shippingoptions" id="radio2"> Urgent
+										Delivery(Extra charge required depending on location and
+										time.)
+									</label>
+
+								</div>
+								<div class="checkout-form-steps">
+									<h4>Billing Options</h4>
+									<label for="radio4"> <input type="radio"
+										name="billingoptions" id="radio4"> In Cash
+									</label> <label for="radio5"> <input type="radio"
+										name="billingoptions" id="radio5"> Visa
+									</label> <label for="radio6"> <input type="radio"
+										name="billingoptions" id="radio6"> Bank Pay
+									</label>
+
+								</div>
+								<input type="submit" class="submitorder-button"
+									value="Submit Order">
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="order_box">
+							<h2>Your Order</h2>
+							<table class="table "   style="background-color: #e8f0f2">
+								<thead>
+									<tr>
+										<th scope="col">Products</th>
+										<th scope="col">Quantity</th>
+										<th scope="col">Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Phone</td>
+										<td>2</td>
+										<td>200$</td>
+									</tr>
+									<tr>
+
+										<td>Phone</td>
+										<td>2</td>
+										<td>200$</td>
+									</tr>
+									<tr>
+
+										<td>Phone</td>
+										<td>2</td>
+										<td>200$</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>Total</td>
+										<td>600$</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Order List End-->
+		</div>
+		<div>.</div>
+	</div>
+	<!-- Checkout End -->
+
+
+	<!-- Jquery V.3.3.1 -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.cycle.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/smoothproducts.min.js"></script>
+	<script>
+	$("#sliderShuffle").cycle({
+		next: '#next',
+		prev: '#prev'
+	});
+	
+	$('.owl-carousel').owlCarousel({
+		items:4,
+		loop:true,
+		margin:15,
+		autoplay:true,
+		autoplayTimeout:3000, //3 Second
+		nav:true,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:true
+			},
+			1000:{
+				items:4,
+				nav:true
+			}
+		}
+
+	});
+
+	$(function(){
+		$(".topbar ul li").click(function(){
+			$(".topbar ul li").not(this).find("ul").slideUp();
+			$(this).find("ul").slideToggle();
+		});
+		$(".topbar ul li ul li, productCategories ul li .megamenu").click(function(e){
+			e.stopPropagation();	
+		});
+		$(".productCategories ul li").click(function(){
+			$(".productCategories ul li").not(this).find(".megamenu").hide();
+			$(this).find(".megamenu").toggle();
+		});
+		$(".otherInfoBody").hide();
+		$(".otherInfoHandle").click(function(){
+			$(".otherInfoBody").slideToggle();
+		});
+		$(".signBtn").click(function(){
+			$("body").css("overflow", "hidden");
+			$(".loginBox").slideDown();
+		});
+		$(".closeBtn").click(function(){
+			$("body").css("overflow", "visible");
+			$(".loginBox").slideUp();
+		});
+		$(".productViewBtn").click(function(e){
+			e.preventDefault();
+			$("body").css("overflow", "hidden");
+			$(".productViewBox").slideDown();
+		});
+		$(".productViewBox-closeBtn").click(function(){
+			$("body").css("overflow", "visible");
+			$(".productViewBox").slideUp();
+		});
+
+		$(".sp-wrap").smoothproducts();
+	});
+</script>
+</body>
+</html>

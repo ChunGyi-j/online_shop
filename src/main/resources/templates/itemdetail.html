@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+<head>
+<meta charset="UTF-8">
+<title>item</title>
+
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/resources/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{/resources/css/slick.css}">
+<link rel="stylesheet" th:href="@{/resources/css/slick-theme.css}">
+<link rel="stylesheet" th:href="@{/resources/css/flip.css}">
+
+<meta charset="UTF-8">
+<title>Cart</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #afc0ff00;
+	color: #333;
+}
+
+.wrapper {
+	width: 1000px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.h1 {
+	display: inline-block;
+	background-color: #fff;
+	color: #ef4478;
+	font-size: 16px;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 4px 20px;
+	float: left;
+	border-radius: 50px;
+}
+
+.clear {
+	clear: both;
+}
+
+.items {
+	display: block;
+	margin: 20px 0;
+}
+
+.item {
+	background-color: #fff;
+	float: left;
+	margin: 0 10px 10px 0;
+	width: 300px;
+	padding: 10px;
+}
+
+.item img {
+	display: block;
+	margin: auto;
+}
+
+.item-btn {
+	border: 1px solid #ef4478;
+	padding: 4px 14px;
+	background: linear-gradient(to right, #ff205f, #ffbe17);
+	color: #fff;
+	text-transform: uppercase;
+	float: right;
+	margin: 5px 0;
+	font-weight: 400;
+	cursor: pointer;
+	font-family: 'Roboto Condensed', sans-serif;
+	border-radius: 50px;
+}
+
+button:focus {
+	outline: none !important;
+}
+
+#shopcart {
+	float: right;
+}
+
+p {
+	font-size: 14px;
+}
+
+.shopping-cart {
+	display: inline-block;
+	background: url(cart.png) no-repeat 0 0;
+	width: 24px;
+	height: 24px;
+	margin: 0 10px 0 0;
+}
+</style>
+
+</head>
+<body>
+	<div layout:fragment="content">
+		<br> <br> <br>
+		<!-- wrapper -->
+		<div class="wrapper">
+
+			<span id="shopcart"><i
+				class="fa fa-shopping-basket fa-2x  shopping-cart"></i></span>
+
+			<div class="clear"></div>
+			<!-- items -->
+			<div class="items">
+				<!-- single item -->
+				<div class="card mx-5 my-5 py-3" style="max-width: 1300px;">
+					<div class="row no-gutters">
+						<div class="col-md-4 ">
+							<img th:src="@{/resources/images/z.jpg}" class="card-img"
+								alt="...">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<a class="float-right button"><span
+									class="fa fa-info-circle" id="info"></span></a>
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This is a wider card with supporting
+									text below as a natural lead-in to additional content. This
+									content is a little bit longer.</p>
+								<p class="card-text">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</p>
+								<button class="item-btn add-to-cart" type="button">Add
+									to cart</button>
+								<a th:href="@{/checkout}"><button class="item-btn mr-3"
+										type="button">Buy Now</button></a> <a th:href="@{/shoppage}"><button
+										class="item-btn mr-3" type="button">Go To Shop</button></a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--/ single item -->
+				<h3>Similar Items</h3>
+				<hr />
+				<div id="carouselExampleCaptions" class="carousel slide my5"
+					data-ride="carousel">
+					<div>
+						<div class="your-class row ">
+							<div class="card col-lg-3 col-md-4 mx-2 border-0">
+								<a th:href="@{/itemdetail}"><img style="height: 230px"
+									th:src="@{/resources/images/1_tb.jpg}" class="card-img-top"
+									alt="..."></a>
+								<div class="card-body">
+									<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+										DDR3</p>
+									
+								</div>
+							</div>
+							<div class="card col-lg-3 col-md-4 mx-2 border-0">
+								<a th:href="@{/itemdetail}"><img style="height: 230px"
+									th:src="@{/resources/images/product-img9.jpg}"
+									class="card-img-top" alt="..."></a>
+								<div class="card-body">
+									<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+										DDR3</p>
+									
+								</div>
+							</div>
+							<div class="card col-lg-3 col-md-4 mx-2 border-0">
+								<a th:href="@{/itemdetail}"><img style="height: 230px"
+									th:src="@{/resources/images/product-img10.jpg}"
+									class="card-img-top" alt="..."></a>
+								<div class="card-body">
+									<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+										DDR3</p>
+
+								</div>
+							</div>
+							<div class="card col-lg-3 col-md-4 mx-2 border-0">
+								<a th:href="@{/itemdetail}"><img style="height: 230px"
+									th:src="@{/resources/images/product-img11.jpg}"
+									class="card-img-top" alt="..."></a>
+								<div class="card-body">
+									<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+										DDR3</p>
+
+								</div>
+							</div>
+							<div class="card col-lg-3 col-md-4 mx-2 border-0">
+								<a th:href="@{/itemdetail}"><img style="height: 230px"
+									th:src="@{/resources/images/product-img12.jpg}"
+									class="card-img-top" alt="..."></a>
+								<div class="card-body">
+									<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+										DDR3</p>
+
+								</div>
+							</div>
+							<div class="card col-lg-3 col-md-4 mx-2 border-0">
+								<a th:href="@{/itemdetail}"><img style="height: 230px"
+									th:src="@{/resources/images/product-img13.jpg}"
+									class="card-img-top" alt="..."></a>
+								<div class="card-body">
+									<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+										DDR3</p>
+									
+								</div>
+							</div>
+						</div>
+						<div><a class="carousel-control-prev " role="button" id="prev"> <span
+							class="carousel-control-prev-icon " aria-hidden="true"> </span> <span
+							class="sr-only">Previous</span>
+						</a></div> <a class="carousel-control-next" role="button" id="next"> <span
+							class="carousel-control-next-icon" aria-hidden="true"></span> <span
+							class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+
+
+			</div>
+			<!--/ items -->
+		</div>
+		<div id="editDialog" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Report</h5>
+					</div>
+					<div class="modal-body">
+						<form id="editForm" th:action="@{/home}" method="post">
+							<div class="form-group">
+								<input type="checkbox"> <i style="font-size: 1.3em;">FakeAcc
+								</i> <br /> <input type="checkbox"> <i
+									style="font-size: 1.3em;">IllegalAction</i> <br /> <input
+									type="checkbox"> <i style="font-size: 1.3em;">Spam</i>
+								<br />
+							</div>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<button id="saveBtn" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ wrapper -->
+		<script type="text/javascript" defer
+			th:src="@{/resources/js/jquery.min.js}"></script>
+		<script type="text/javascript" defer
+			th:src="@{/resources/js/slick.min.js}"></script>
+		<script type="text/javascript" defer
+			th:src="@{/resources/js/common.js}"></script>
+		<script type="text/javascript" defer
+			th:src="@{/resources/js/alert.js}"></script>
+
+	</div>
+</body>
+</html>
