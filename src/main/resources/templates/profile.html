@@ -10,66 +10,382 @@
 	<div layout:fragment="content">
 		<div class="my-4">j</div>
 		<div class="container">
-			<div class="card ">
-				<div class="row">
-					<div class="col-2 text-center border-right">
-						<img th:src="@{resources/images/user.jpg}"
-							class="card-img rounded-circle border my-3" style="width: 8rem;" />
-						<h4>User Name</h4>
-					</div>
-					<div class="col-10 pl-0">
-						<div class="card-header">
-							<ul class="nav nav-tabs card-header-tabs">
-								<li class="nav-item"><a class="nav-link active" role="tab"
-									href="#accountsetting" data-toggle="tab">account setting</a></li>
-								<li class="nav-item"><a class="nav-link" role="tab"
-									href="#recentviews" data-toggle="tab">Recent Views</a></li>
-								<li class="nav-item"><a class="nav-link" role="tab"
-									href="#recentsell" data-toggle="tab">Recent Sell</a></li>
+			<div class="card mb-5 mx-auto" style="width: 55rem;">
+				<div class=" text-center" style="background-color: #a29fa59c">
+					<img th:src="@{resources/images/user.jpg}"
+						class="card-img rounded-circle border my-3" style="width: 8rem;" />
+					<h4>User Name</h4>
+				</div>
+				<div class="pl-0">
+					<div class="card-header">
+						<ul class="nav nav-tabs card-header-tabs">
+							<li class="nav-item"><a class="nav-link active" role="tab"
+								href="#accountsetting" data-toggle="tab">Account Setting</a></li>
+							<li class="nav-item"><a class="nav-link" role="tab"
+								href="#recentviews" data-toggle="tab">Recent Views</a></li>
+							<li class="nav-item"><a class="nav-link" role="tab"
+								href="#recentsell" data-toggle="tab">Recent Sell</a></li>
+							<li class="nav-item"><a class="nav-link" role="tab"
+								href="#purchasehistory" data-toggle="tab">Purchase History</a></li>
 
-							</ul>
-						</div>
-						<div class="card-body ">
-							<div class="tab-content   mt-3">
-								<div class="tab-pane  active" role="tabpanel"
-									id="accountsetting">
-									<div class="container ">
-										<table class="table">
-											<tbody>
-												<tr class="row">
-													<td class="col-9">Change Profile Photo</td>
-													<td class="col-3"><button  type="button" class="btn btn-light">Edit</button></td>
-												</tr>
-												<tr class="row">
-													<td class="col-9">Change User Name</td>
-													<td class="col-3"><button  type="button" class="btn btn-light">Edit</button></td>
-												</tr>
-												<tr class="row">
-													<td class="col-9">Change Password</td>
-													<td class="col-3"><button  type="button" class="btn btn-light">Edit</button></td>
-												</tr>
-												<tr class="row">
-													<td class="col-9">Change Address</td>
-													<td class="col-3"><button  type="button" class="btn btn-light">Edit</button></td>
-												</tr>
-											</tbody>
-										</table>
+						</ul>
+					</div>
+					<div class="card-body ">
+						<div class="tab-content   mt-3">
+							<div class="tab-pane  active" role="tabpanel" id="accountsetting">
+								<div class="container ">
+									<table class="table">
+										<tbody>
+											<tr class="row">
+												<td class="col-9"><i class="fa fa-photo mx-2"></i>
+													Change Profile Photo</td>
+												<td class="col-3"><button class="btn btn-light"
+														id="photo">Edit</button></td>
+											</tr>
+											<tr class="row">
+												<td class="col-9"><i class="fa fa-pencil mx-2"></i>Change
+													User Name</td>
+												<td class="col-3"><button id="name"
+														class="btn btn-light">Edit</button></td>
+											</tr>
+											<tr class="row">
+												<td class="col-9"><i class="fa fa-eye mx-2"></i>Change
+													Password</td>
+												<td class="col-3"><button id="password"
+														class="btn btn-light">Edit</button></td>
+											</tr>
+											<tr class="row">
+												<td class="col-9 "><i class="fa fa-address-card-o mx-2"></i>Change
+													Address</td>
+												<td class="col-3"><button id="address"
+														class="btn btn-light">Edit</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="tab-pane" role="tabpanel" id="recentviews">
+								<div class="row my-5 ">
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img7.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 999
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img6.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 255
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img5.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 444
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img4.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
+
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img6.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img7.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img8.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
 									</div>
 								</div>
+							</div>
 
-								<div class="tab-pane" role="tabpanel" id="recentviews">
-									
-								</div>
+							<div class="tab-pane" role="tabpanel" id="recentsell">
+								<div class="row my-5 ">
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img1.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 999
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img2.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 255
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img3.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 444
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img4.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
 
-								<div class="tab-pane" role="tabpanel" id="recentsell">
-									<p>sell
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img6.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img7.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
+									<div class="card col-3 border-0 " style="width: 18rem;">
+										<a th:href="@{/itemdetail}"><img
+											th:src="@{/resources/images/product-img8.jpg}"
+											class="card-img-top" alt="..."></a>
+										<div class="card-body">
+											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+												DDR3</p>
+											<p>
+												<i class="fa fa-dollar"></i> 598
+											</p>
+										</div>
+									</div>
 								</div>
+							</div>
+							<div class="tab-pane" role="tabpanel" id="purchasehistory">
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th scope="col">No</th>
+											<th scope="col">Products</th>
+											<th scope="col">Total Cost</th>
+											<th scope="col">Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td><i class="fa fa-dollar"></i> 598</td>
+											<td>20.2.2020</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Mark</td>
+											<td><i class="fa fa-dollar"></i> 540</td>
+											<td>20.2.2020</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Mark</td>
+											<td><i class="fa fa-dollar"></i> 1000</td>
+											<td>20.2.2020</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div id="profilephoto" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Profile Photo</h5>
+					</div>
+					<div class="modal-body">
+						<form id="editForm" th:action="@{/home}" method="post">
+							<div class="form-group">
+								<input type="file" class="custom-file-input"
+									id="inputGroupFile02"> <label class="custom-file-label"
+									for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload
+									Profile</label>
+							</div>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<button id="saveBtn" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="changename" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Change Your Name</h5>
+					</div>
+					<div class="modal-body">
+						<form id="editForm" th:action="@{/home}" method="post">
+							<div class="form-group">
+								<div class="form-group">
+									<label>Your Name</label> <input type="text"
+										class="form-control" placeholder="Enter Your  Name">
+								</div>
+								
+							</div>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<button id="saveBtn" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="changepassword" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Change Password</h5>
+					</div>
+					<div class="modal-body">
+						<form id="editForm" th:action="@{/home}" method="post">
+							<div class="form-group">
+								<div class="form-group">
+									<label>Correct Password</label> <input type="password"
+										class="form-control my-1" placeholder="Enter Correct Password">
+									<label>New Password</label> <input type="password"
+										class="form-control my-1" placeholder="Enter New Password"><label>
+										New Password</label> <input type="password" class="form-control my-1"
+										placeholder="Enter New Password">
+								</div>
+
+							</div>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<button id="saveBtn" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="changeaddress" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Change Address</h5>
+					</div>
+					<div class="modal-body">
+						<form id="editForm" th:action="@{/home}" method="post">
+							<div class="form-group">
+								<div class="form-group">
+									<label>Street</label> <input type="text" class="form-control my-1"
+										placeholder="Enter Your  Street"> <label>Township</label>
+									<input type="text" class="form-control my-1"
+										placeholder="Enter Your  Township"> <label>City</label>
+									<input type="text" class="form-control my-1"
+										placeholder="Enter Your  City">
+								</div>
+
+							</div>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<button id="saveBtn" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </body>
 </html>

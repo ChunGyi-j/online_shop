@@ -7,38 +7,7 @@
 <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
 <link rel="stylesheet" th:href="@{resources/css/font-awesome.min.css}">
 <link rel="stylesheet" th:href="@{resources/css/headerStyle.css}">
-
-<style>
-form.example input[type=text] {
-	padding: 10px;
-	font-size: 17px;
-	border: 1px solid grey;
-	border-right: none;
-	float: left;
-	width: 200px;
-	height: 35px;
-	background: #f1f1f1;
-	box-sizing: border-box;
-}
-
-.search-btn {
-	float: left;
-	width: 50px;
-	height: 35px;
-	background: #f1f1f1;
-	color: black;
-	font-size: 17px;
-	border: 1px solid grey;
-	border-left: none;
-	cursor: pointer;
-}
-
-form.example::after {
-	content: "";
-	clear: both;
-	display: table;
-}
-</style>
+<link rel="stylesheet" th:href="@{/resources/css/flip.css}">
 </head>
 <body>
 
@@ -51,6 +20,13 @@ form.example::after {
 			</a>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active  ml-2"><a
+						class="nav-link nav-text " th:href="@{/createshop}"><i
+							class="fa fa-user-circle-o"></i>Account</a></li>
+					<li class="nav-item active  ml-2"><a
+						class="nav-link nav-text"
+						th:href="@{/createshop}"><i class="fa fa-user-circle-o"></i>
+							Account</a></li>
 					<li class="nav-item active  ml-2"><a class="nav-link nav-text"
 						th:href="@{/createshop}">Create Shop</a></li>
 					<li class="nav-item active"><a class="nav-link nav-text"
@@ -59,13 +35,12 @@ form.example::after {
 						href="#" role="button" id="dropdownMenuLink"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Products </a>
-
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 							<a class="dropdown-item" href="#">Action</a> <a
 								class="dropdown-item" href="#">Another action</a> <a
 								class="dropdown-item" href="#">Something else here</a>
 						</div></li>
-						<li class="nva-item dropdown"><a class="btn  dropdown-toggle"
+					<li class="nva-item dropdown"><a class="btn  dropdown-toggle"
 						href="#" role="button" id="dropdownMenuLink"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Shop </a>
@@ -133,20 +108,20 @@ form.example::after {
 							<h4 class="footer_title text-dark my-4">PopularProducts</h4>
 							<div class="row">
 								<div class="col-md-6 mb-2">
-									<img th:src="@{/resources/images/z.jpg}" class="card-img"
-										alt="...">
+									<img th:src="@{/resources/images/product-img1.jpg}"
+										class="card-img" alt="...">
 								</div>
 								<div class="col-md-6 mb-2">
-									<img th:src="@{/resources/images/z.jpg}" class="card-img"
-										alt="...">
+									<img th:src="@{/resources/images/product-img2.jpg}"
+										class="card-img" alt="...">
 								</div>
 								<div class="col-md-6 ">
-									<img th:src="@{/resources/images/z.jpg}" class="card-img"
-										alt="...">
+									<img th:src="@{/resources/images/product-img3.jpg}"
+										class="card-img" alt="...">
 								</div>
 								<div class="col-md-6 ">
-									<img th:src="@{/resources/images/z.jpg}" class="card-img"
-										alt="...">
+									<img th:src="@{/resources/images/product-img4.jpg}"
+										class="card-img" alt="...">
 								</div>
 							</div>
 						</div>
@@ -203,6 +178,7 @@ form.example::after {
 		th:src="@{/resources/js/slick.min.js}"></script>
 	<script type="text/javascript" defer
 		th:src="@{/resources/js/common.js}"></script>
+	<script type="text/javascript" defer th:src="@{/resources/js/alert.js}"></script>
 	<script type="text/javascript" defer
 		th:src="@{/resources/js/popper.min.js}"></script>
 	<script type="text/javascript" defer

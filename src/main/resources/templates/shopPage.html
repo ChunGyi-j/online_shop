@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Layout</title>
 <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+
 <link rel="stylesheet" th:href="@{resources/css/font-awesome.min.css}">
 <link rel="stylesheet" th:href="@{resources/css/shopPage.css}">
 <link rel="stylesheet" th:href="@{/resources/css/slick.css}">
@@ -15,15 +16,16 @@
 </head>
 <body>
 	<div layout:fragment="content">
+	<div class="my-4">j</div>
 		<div class="container">
 			<div class="">
-				<img class="col-12" th:src="@{/resources/images/images.jpg}">
+				<img class="col-12" th:src="@{/resources/images/shop-logo.jpg}">
 			</div>
 			<div class="card border-0 col-12 my-3">
 				<div class="row no-gutters">
 					<div class="col-md-2">
-						<img th:src="@{/resources/images/online-shop.png}" class="card-img"
-							alt="...">
+						<img th:src="@{/resources/images/online-shop.png}"
+							class="card-img" alt="...">
 					</div>
 					<div class="col-md-10">
 						<div class="card-body">
@@ -36,82 +38,196 @@
 					</div>
 				</div>
 			</div>
-			<h3>
-				<a href="">On Sell</a>
-			</h3>
+			<h3>2020 Fresh Stock</h3>
+			<hr />
 			<div id="carouselExampleCaptions" class="carousel slide my5"
 				data-ride="carousel">
 				<div>
-					<div class="your-class2 row ">
-						<div class="card border-0 col-3 mx-2">
-							<a th:href="@{itemdetail}"><img
-								th:src="@{/resources/images/z.jpg}" class="card-img-top"
+					<div class="your-class row ">
+						<div class="card col-lg-3 col-md-4 mx-2 border-0">
+							<a th:href="@{/itemdetail}"><img style="height: 230px"
+								th:src="@{/resources/images/1_tb.jpg}" class="card-img-top"
 								alt="..."></a>
-							<div class="card-body text-center">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">This is a short card.</p>
+							<div class="card-body">
+								<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+									DDR3</p>
+								<h5>
+									<i class="fa fa-tags mr-3"></i>30 <i class="fa fa-percent mx-1"></i>
+									<i>OFF</i>
+								</h5>
 							</div>
 						</div>
-						<div class="card border-0 col-3 mx-2">
-							<a th:href="@{itemdetail}"><img
-								th:src="@{/resources/images/z.jpg}" class="card-img-top"
-								alt="..."></a>
-							<div class="card-body text-center">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">This is a short card.</p>
+						<div class="card col-lg-3 col-md-4 mx-2 border-0">
+							<a th:href="@{/itemdetail}"><img style="height: 230px"
+								th:src="@{/resources/images/product-img9.jpg}"
+								class="card-img-top" alt="..."></a>
+							<div class="card-body">
+								<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+									DDR3</p>
+								<h5>
+									<i class="fa fa-tags mr-3"></i>10 <i class="fa fa-percent mx-1"></i>
+									<i>OFF</i>
+								</h5>
 							</div>
 						</div>
-						<div class="card border-0 col-3 mx-2">
-							<a th:href="@{itemdetail}"><img
-								th:src="@{/resources/images/z.jpg}" class="card-img-top"
-								alt="..."></a>
-							<div class="card-body text-center">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">This is a short card.</p>
+						<div class="card col-lg-3 col-md-4 mx-2 border-0">
+							<a th:href="@{/itemdetail}"><img style="height: 230px"
+								th:src="@{/resources/images/product-img10.jpg}"
+								class="card-img-top" alt="..."></a>
+							<div class="card-body">
+								<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+									DDR3</p>
+								<h5>
+									<i class="fa fa-tags mr-3"></i>15 <i class="fa fa-percent mx-1"></i>
+									<i>OFF</i>
+								</h5>
 							</div>
 						</div>
-						<div class="card border-0 col-3 mx-2">
-							<a th:href="@{itemdetail}"><img
-								th:src="@{/resources/images/z.jpg}" class="card-img-top"
-								alt="..."></a>
-							<div class="card-body text-center">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">This is a short card.</p>
+						<div class="card col-lg-3 col-md-4 mx-2 border-0">
+							<a th:href="@{/itemdetail}"><img style="height: 230px"
+								th:src="@{/resources/images/product-img11.jpg}"
+								class="card-img-top" alt="..."></a>
+							<div class="card-body">
+								<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+									DDR3</p>
+								<h5>
+									<i class="fa fa-tags mr-3"></i>50 <i class="fa fa-percent mx-1"></i>
+									<i>OFF</i>
+								</h5>
 							</div>
 						</div>
-						<div class="card border-0 col-3 mx-2">
-							<a th:href="@{itemdetail}"><img
-								th:src="@{/resources/images/z.jpg}" class="card-img-top"
-								alt="..."></a>
-							<div class="card-body text-center">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">This is a short card.</p>
+						<div class="card col-lg-3 col-md-4 mx-2 border-0">
+							<a th:href="@{/itemdetail}"><img style="height: 230px"
+								th:src="@{/resources/images/product-img12.jpg}"
+								class="card-img-top" alt="..."></a>
+							<div class="card-body">
+								<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+									DDR3</p>
+								<h5>
+									<i class="fa fa-tags mr-3"></i>10 <i class="fa fa-percent mx-1"></i>
+									<i>OFF</i>
+								</h5>
 							</div>
 						</div>
-						<div class="card border-0  col-3 mx-2">
-							<a th:href="@{itemdetail}"><img
-								th:src="@{/resources/images/z.jpg}" class="card-img-top"
-								alt="..."></a>
-							<div class="card-body text-center">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">This is a short card.</p>
+						<div class="card col-lg-3 col-md-4 mx-2 border-0">
+							<a th:href="@{/itemdetail}"><img style="height: 230px"
+								th:src="@{/resources/images/product-img13.jpg}"
+								class="card-img-top" alt="..."></a>
+							<div class="card-body">
+								<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
+									DDR3</p>
+								<h5>
+									<i class="fa fa-tags mr-3"></i>20 <i class="fa fa-percent mx-1"></i>
+									<i>OFF</i>
+								</h5>
 							</div>
 						</div>
 					</div>
-					<a class="carousel-control-prev" role="button" id="prev2"> <span
+					<a class="carousel-control-prev" role="button" id="prev"> <span
 						class="carousel-control-prev-icon " aria-hidden="true"> </span> <span
 						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" role="button" id="next2"> <span
+					</a> <a class="carousel-control-next" role="button" id="next"> <span
 						class="carousel-control-next-icon" aria-hidden="true"></span> <span
 						class="sr-only">Next</span>
 					</a>
 				</div>
 			</div>
+			<h3>Products</h3>
+			<hr />
+			<div class="row my-5 ">
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img1.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 999
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img2.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 255
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img3.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 444
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img4.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 598
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img style="height: 250px"
+						th:src="@{/resources/images/product-img5.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 598
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img6.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 598
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img7.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 598
+						</p>
+					</div>
+				</div>
+				<div class="card col-3 border-0 " style="width: 18rem;">
+					<a th:href="@{/itemdetail}"><img
+						th:src="@{/resources/images/product-img8.jpg}"
+						class="card-img-top" alt="..."></a>
+					<div class="card-body">
+						<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
+						<p>
+							<i class="fa fa-dollar"></i> 598
+						</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
-
-
 	//-->
 
 	<script type="text/javascript" defer

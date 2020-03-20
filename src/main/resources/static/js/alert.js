@@ -49,4 +49,53 @@ $(function() {
 	$('#saveBtn').click(function() {
 		$('#editForm').submit()
 	})
+
+	$('#photo').click(function(event) {
+		let code = $(event.currentTarget).prev().html()
+		let action = $('#editForm').attr("action")
+
+		$('#editForm').attr('action', `${action}`)
+		$('#editName').val(code)
+
+		$('#profilephoto').modal()
+	})
+	$('#saveBtn').click(function() {
+		$('#editForm').submit()
+	})
+	$('#name').click(function(event) {
+		let code = $(event.currentTarget).prev().html()
+		let action = $('#editForm').attr("action")
+
+		$('#editForm').attr('action', `${action}`)
+		$('#editName').val(code)
+
+		$('#changename').modal()
+	})
+	$('#saveBtn').click(function() {
+		$('#editForm').submit()
+	})
+	$('#password').click(function(event) {
+		let code = $(event.currentTarget).prev().html()
+		let action = $('#editForm').attr("action")
+
+		$('#editForm').attr('action', `${action}`)
+		$('#editName').val(code)
+
+		$('#changepassword').modal()
+	})
+	$('#saveBtn').click(function() {
+		$('#editForm').submit()
+	})
+	$('#address').click(function(event) {
+		let code = $(event.currentTarget).prev().html()
+		let action = $('#editForm').attr("action")
+
+		$('#editForm').attr('action', `${action}`)
+		$('#editName').val(code)
+
+		$('#changeaddress').modal()
+	})
+	$('#saveBtn').click(function() {
+		$('#editForm').submit()
+	})
 })
