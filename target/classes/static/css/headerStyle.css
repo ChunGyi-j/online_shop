@@ -9,25 +9,28 @@
 form.example input[type=text] {
 	padding: 10px;
 	font-size: 17px;
-	border: 1px solid grey;
+	border: 1px solid #ffc85c;
 	border-right: none;
 	float: left;
 	width: 200px;
 	height: 35px;
 	background: #f1f1f1;
 	box-sizing: border-box;
+	border-radius: 8px 0px 0px 8px;
 }
 
 .search-btn {
 	float: left;
 	width: 50px;
 	height: 35px;
-	background: #f1f1f1;
+	background: #ffc85c;
 	color: black;
 	font-size: 17px;
-	border: 1px solid grey;
+	border: 1px solid #ffc85c;
 	border-left: none;
 	cursor: pointer;
+	border-radius: 0px 8px 8px 0px;
+	
 }
 
 form.example::after {

@@ -1,0 +1,270 @@
+h3 {
+	margin-top: 2em;
+	font-family: serif;
+	text-transform: uppercase;
+}
+
+/* cart */
+.shopping-cart img {
+	width: 150px;
+}
+
+.shopping-cart {
+	padding-top: 80px;
+	padding-bottom: 60px;
+}
+
+.cart-table {
+	margin-bottom: 40px;
+}
+
+.cart-table table {
+	width: 100%;
+	min-width: 480px;
+	border: 1px solid #ebebeb;
+}
+
+.cart-table table tr th {
+	font-size: 16px;
+	color: #252525;
+	font-weight: 700;
+	border-bottom: 1px solid #ebebeb;
+	text-align: center;
+	padding: 18px 0 19px;
+	text-transform: uppercase;
+}
+
+.cart-table table tr th.p-name {
+	text-align: left;
+}
+
+.cart-table table tr td {
+	text-align: center;
+	padding-bottom: 34px;
+}
+
+.cart-table table tr td.first-row {
+	padding-top: 30px;
+}
+
+.cart-table table tr td.cart-pic {
+	width: 21%;
+}
+
+.cart-table table tr td.cart-title {
+	text-align: left;
+}
+
+.cart-table table tr td.p-price {
+	width: 16%;
+}
+
+.cart-table table tr td.qua-col {
+	width: 16%;
+}
+
+.cart-table table tr td.qua-col .pro-qty {
+	width: 123px;
+	height: 46px;
+	border: 2px solid #ebebeb;
+	padding: 0 15px;
+	float: left;
+}
+
+.cart-table table tr td.qua-col .pro-qty .qtybtn {
+	font-size: 24px;
+	color: #b2b2b2;
+	float: left;
+	line-height: 38px;
+	cursor: pointer;
+	width: 18px;
+}
+
+.cart-table table tr td.qua-col .pro-qty .qtybtn.dec {
+	font-size: 30px;
+}
+
+.cart-table table tr td.qua-col .pro-qty input {
+	text-align: center;
+	width: 52px;
+	font-size: 14px;
+	font-weight: 700;
+	border: none;
+	color: #4c4c4c;
+	line-height: 40px;
+	float: left;
+}
+
+.cart-table table tr td.close-td i {
+	cursor: pointer;
+}
+
+.cart-buttons {
+	margin-bottom: 34px;
+}
+
+.cart-buttons .continue-shop {
+	color: #b2b2b2;
+	border: 2px solid #ebebeb;
+	background: #ffffff;
+	margin-right: 8px;
+	padding: 12px 20px 12px 20px;
+	margin-bottom: 10px;
+}
+
+.cart-buttons .up-cart {
+	color: #252525;
+	background: #f3f3f3;
+	border: 2px solid #ebebeb;
+	padding: 12px 20px 12px 20px;
+}
+
+.proceed-checkout ul {
+	border: 2px solid #ebebeb;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 16px;
+	padding-bottom: 20px;
+}
+
+.proceed-checkout ul li {
+	list-style: none;
+	font-size: 16px;
+	font-weight: 700;
+	color: #252525;
+	text-transform: uppercase;
+	overflow: hidden;
+}
+
+.proceed-checkout ul li.cart-total {
+	padding-top: 10px;
+}
+
+.proceed-checkout ul li span {
+	float: right;
+}
+
+.proceed-checkout .proceed-btn {
+	background: warning;
+	text-transform: uppercase;
+	padding: 15px 25px 14px 25px;
+	display: block;
+	text-align: center;
+	border-radius: 30px;
+}
+/*Checkout Style*/
+.checkout {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	padding: 45px 0;
+}
+
+.checkout h2 {
+	font-size: 22px;
+	font-weight: 700;
+	color: #222;
+	border-bottom: 1px solid;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+.checkout-inner {
+	width: 100%;
+	float: left;
+	border-right: 1px solid #c5c5c5;
+	padding-right: 25px;
+}
+
+.checkout-form-steps {
+	width: 100%;
+	padding: 15px;
+	display: inline-block;
+}
+
+.checkout-form-steps h4 {
+	font-size: 18px;
+	font-weight: 700;
+	border-bottom: 1px solid;
+	color: #ff9800;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+}
+
+.checkout-form-steps .textfield {
+	width: 100%;
+	height: 45px;
+	border-radius: 4px;
+	border: 2px solid #d0d0d0;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.checkout-form-steps label {
+	width: 100%;
+	float: left;
+	border: 2px solid #d0d0d0;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.submitorder-button {
+	width: 300px;
+	height: 50px;
+	margin: 15px;
+	border-radius: 30px;
+	float: right;
+	font-size: 22px;
+	color: #fff;
+	border: none;
+	font-weight: 600;
+	background-color: #ffa800;
+}
+
+/*Order List Style*/
+.orderlist {
+	width: 28%;
+	float: right;
+}
+
+.orderlist h3 {
+	font-size: 18px;
+	padding: 15px 0;
+	line-height: 22px;
+}
+
+.orderlist p {
+	padding: 15px 10px;
+	background-color: #00000010;
+	font-size: 18px;
+	border-bottom: 1px solid #00000020;
+}
+
+.orderlist p span {
+	float: right;
+}
+
+.orderlist .textfield {
+	width: 100%;
+	height: 45px;
+	padding: 15px;
+	border-radius: 4px;
+	margin: 15px 0;
+	border: 1px solid #00000040;
+	font-size: 16px;
+}
+
+.orderlist .applycode-button {
+	width: 100%;
+	height: 45px;
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 25px;
+	border: none;
+	font-size: 16px;
+	background-color: #ffa80050;
+}

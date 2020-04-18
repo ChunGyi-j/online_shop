@@ -78,7 +78,7 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #ff205f, #ffbe17);
+   color: #ff9800;
     border: 0;
     outline: none;
     border-radius: 30px;
