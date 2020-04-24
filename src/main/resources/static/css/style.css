@@ -21,7 +21,7 @@
 }
 .button-box{
     width: 220px;
-    margin: 35px auto;
+    margin: 55px auto 0px auto;
     position: relative;
     box-shadow: 0 0 4px 4px #b4b6c13b;
     border-radius: 30px;

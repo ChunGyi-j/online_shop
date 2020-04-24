@@ -21,15 +21,11 @@ public class WebConfig implements WebMvcConfigurer {
 	registry.addViewController("/buyitem").setViewName("buyitem");
 	registry.addViewController("/shoppage").setViewName("shopPage");
 	registry.addViewController("/itemdetail").setViewName("itemdetail");
-	registry.addViewController("/sign").setViewName("sign");
 	registry.addViewController("/h").setViewName("header");
-	registry.addViewController("/createshop").setViewName("multi-step-form");
 	registry.addViewController("/itemdetail2").setViewName("itemdetail2");
-	registry.addViewController("/additem").setViewName("addItem");
 	registry.addViewController("/checkout").setViewName("checkout");
 	registry.addViewController("/shop").setViewName("shopKeeper");
 	registry.addViewController("/orderhistory").setViewName("orderHistory");
-	registry.addViewController("/muti-step-form2").setViewName("multi-step-form2");
 	registry.addViewController("/profile").setViewName("profile");
 	registry.addViewController("/admin").setViewName("adminProfile");
 	registry.addViewController("/adminhome").setViewName("adminHome");

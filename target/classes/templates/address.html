@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/template.html}">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign</title>
+
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/resources/css/style.css}">
+
+</head>
+<style>
+<!--
+-->
+</style>
+<body>
+
+	<div layout:fragment="content">
+		<br> <br> <br> <br> <br>
+		<div class="container">
+			<div class="row">
+				<div class="col-3 mx-auto">
+				<div ><h3 class="mx-auto">Address Form</h3><br></div>
+					<form th:action="@{/sign}" method="post" th:object="${account}">
+						<div class="form-group " style="width: 18rem">
+							<input type="hidden" class="input-field" th:field="*{name}"><input
+								type="hidden" class="input-field" th:field="*{email}"><input
+								type="hidden" class="input-field" th:field="*{password}">
+							<input type="text" class="input-field"
+								placeholder="Enter your Street" th:field="*{address.street}">
+							<input type="text" class="input-field"
+								placeholder="Enter your Township" th:field="*{address.township}">
+							<input type="text" class="input-field"
+								placeholder="Enter your City" th:field="*{address.city}">
+							<input type="text" class="input-field"
+								placeholder="Enter your Zip Code">
+							<button type="submit" class="submit-btn btn btn-warning mt-4 ">
+								<span> </span> Register <span> </span>
+							</button>
+
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 package com.jdc.model.entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,8 +24,69 @@ public class Item implements Serializable{
 	private int instock;
 	private int price;
 	private int itemRating;
+	private LocalDateTime sellDate;
+	private String itemPhotoName;
+	private String itemPhotoLocation;
 	@ManyToOne
 	private Category category;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getInstock() {
+		return instock;
+	}
+	public void setInstock(int instock) {
+		this.instock = instock;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getItemRating() {
+		return itemRating;
+	}
+	public void setItemRating(int itemRating) {
+		this.itemRating = itemRating;
+	}
+	public LocalDateTime getSellDate() {
+		return sellDate;
+	}
+	public void setSellDate(LocalDateTime sellDate) {
+		this.sellDate = sellDate;
+	}
+	public String getItemPhotoName() {
+		return itemPhotoName;
+	}
+	public void setItemPhotoName(String itemPhotoName) {
+		this.itemPhotoName = itemPhotoName;
+	}
+	public String getItemPhotoLocation() {
+		return itemPhotoLocation;
+	}
+	public void setItemPhotoLocation(String itemPhotoLocation) {
+		this.itemPhotoLocation = itemPhotoLocation;
+	}
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	
+	
+	
+	
 	
 	
 

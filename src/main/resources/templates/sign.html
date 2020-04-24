@@ -30,13 +30,14 @@
 						
 					<button type="submit" class="submit-btn btn btn-warning mt-4">Log In</button>
 				</form>
-				<form id="register" th:action="@{/register}" class="input-group">
+				<form id="register" th:action="@{/firstregister}" class="input-group" th:object="${account}" method="post">
 					<input type="text" class="input-field"
-						placeholder="Enter User Name" required> <input type="text"
-						class="input-field" placeholder="Enter Email" required> <input
-						type="text" class="input-field" placeholder="Enter Password"
+						placeholder="Enter User Name"  th:field="*{name}" required> <input type="text"
+						class="input-field" placeholder="Enter Email" th:field="*{email}" required> <input
+						type="text" class="input-field" placeholder="Enter Password" th:field="*{password}"
 						required><input type="text" class="input-field"
 						placeholder="Enter Confirm-Password" required>
+						
 					<button type="submit" class="submit-btn btn btn-warning mt-4">Register</button>
 				</form>
 			</div>

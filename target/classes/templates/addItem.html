@@ -101,46 +101,28 @@ body {
 }
 </style>
 </head>
-<body
-	style="background-image: url('http://localhost/images/gradient1.jpeg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+<body>
 	<div layout:fragment="content">
+	<br>
+	<br>
+	<br>
+	<br>
 		<div class="b"></div>
 		<div class="box text-dark">
 			<h1>Add Item</h1>
-			<form action="">
+			<form th:action="@{/additem}" enctype="multipart/form-data" th:object="${item}" method="post">
 				<div class="inputBox">
-					<input type="text" name="" required="required"> <label>Name</label>
+					<input type="text" th:field="*{name}" required="required"> <label>Name</label>
 				</div>
 				<div class="inputBox">
-					<div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button"
-							data-toggle="dropdown">
-							Tutorials
-						</button>
-						<ul class="dropdown-menu">
-							<li><a tabindex="-1" href="#">HTML</a></li>
-							<li><a tabindex="-1" href="#">CSS</a></li>
-							<li class="dropdown-submenu"><a class="test" tabindex="-1"
-								href="#">New dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-									<li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-									<li class="dropdown-submenu"><a class="test">Another
-											dropdown <span class="caret"></span>
-									</a>
-										<ul class="dropdown-menu">
-											<li><a href="#">3rd level dropdown</a></li>
-											<li><a href="#">3rd level dropdown</a></li>
-										</ul></li>
-								</ul></li>
-						</ul>
-					</div>
+					<input type="text" th:field="*{price}" required="required"> <label>Price</label>
 				</div>
 				<div class="inputBox">
-					<input type="text" name="" required="required"> <label>Price</label>
+					<input type="text" th:field="*{instock}" required="required"> <label>Instock</label>
 				</div>
+				
 				<div class="custom-file ">
-					<input type="file" class="custom-file-input" id="inputGroupFile02">
+					<input type="file" class="custom-file-input" name="files" id="inputGroupFile02">
 					<label class="custom-file-label" for="inputGroupFile02"
 						aria-describedby="inputGroupFileAddon02">Upload Shop Logo</label>
 				</div>
