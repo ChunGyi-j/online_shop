@@ -16,5 +16,5 @@ server:
 nginx:
   location: http://localhost/images/
 image:
-  baseDir: D:/nginx-1.16.2/html/imags/
+  baseDir: D:/nginx-1.16.2/html/images/
 

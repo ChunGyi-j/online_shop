@@ -23,26 +23,26 @@
 					</ul>
 					<!-- Fieldsets -->
 					<fieldset id="first">
-						<div>
+						<div style="width: 25rem" class="mx-auto">
 							<div class="form-group">
-								<label>Shop Name</label> <input type="text" class="form-control"
+								 <input type="text" class="input-field"
 									placeholder="Enter Your Shop Name"  th:field="*{shopName}">
 							</div>
 							<div class="form-group">
-								<label>City</label> <input type="text" class="form-control"
+								<input type="text" class="input-field"
 									placeholder="Enter Your City" th:field="*{address.city}">
 							</div>
 							<div class="form-group">
-								<label>Street</label> <input type="text" class="form-control"
+								<input type="text" class="input-field"
 									placeholder="Enter Your Street" th:field="*{address.street}">
 							</div>
 							<div class="form-group">
-								<label>Township</label> <input type="text" class="form-control"
+								 <input type="text" class="input-field"
 									placeholder="Enter Your Township" th:field="*{address.township}">
 							</div>
 
 							<div class="form-group">
-								<label>Contact</label> <input type="text" class="form-control"
+								 <input type="text" class="input-field"
 									placeholder="Contact" th:field="*{contact}">
 							</div>
 
@@ -52,9 +52,10 @@
 						</div>
 					</fieldset>
 					<fieldset id="second">
-						<div class="form-group">
+						<div class="form-group mx-auto" style="width: 25rem" >
+						
 
-							<textarea name="address" placeholder="Shop Details.." th:field="*{shopInfo}"></textarea>
+							<textarea name="address" class="input-field " style="height: 200px"  placeholder="Shop Details.." th:field="*{shopInfo}"></textarea>
 
 							<input id="pre_btn1" class="btn btn-primary"
 								onclick="prev_step1()" type="button" value="Previous"> <input

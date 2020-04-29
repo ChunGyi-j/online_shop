@@ -29,6 +29,8 @@ public class Item implements Serializable{
 	private String itemPhotoLocation;
 	@ManyToOne
 	private Category category;
+	@ManyToOne
+	private Account account;
 	public Long getId() {
 		return id;
 	}
@@ -83,6 +85,13 @@ public class Item implements Serializable{
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	
 	
 	
 	

@@ -2,6 +2,7 @@ package com.jdc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -31,15 +32,18 @@ public class AccountController {
 	}
 
 	@PostMapping("/sign")
-	public String createAddress(Account account) {
-		accountservice.createAccount(account);
-		return "home";
+	public String createAddress(Account account,BindingResult result) {
+		
+		 if(result.hasErrors()){
+	            return "sign";
+	        }
+		 accountservice.createAccount(account);
+		 return "home";
 	}
 
 	@GetMapping("/profile")
 	public String profile(Model model) {
 		return "profile";
-
 	}
 
 }

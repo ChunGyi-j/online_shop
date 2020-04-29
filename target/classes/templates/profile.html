@@ -9,12 +9,12 @@
 <body>
 	<div layout:fragment="content">
 		<div class="my-4">j</div>
-		<div class="container">
+		<div class="container" th:each="member : ${member}">
 			<div class="card mb-5 mx-auto" style="width: 55rem;">
 				<div class=" text-center" style="background-color: #a29fa59c">
-					<img th:src="@{http://localhost/images/profile.png}"
+					<img th:src="@{${member.profilephotoLocation}}"
 						class="card-img rounded-circle border my-3" style="width: 8rem;" />
-					<h4>User Name</h4>
+					<h4 th:text="${member.name}"></h4>
 				</div>
 				<div class="pl-0">
 					<div class="card-header">
@@ -156,89 +156,15 @@
 							</div>
 
 							<div class="tab-pane" role="tabpanel" id="recentsell">
-								<div class="row my-5 ">
+								<div class="row my-5" th:object="products:${sellProducts}">
 									<div class="card col-3 border-0 " style="width: 18rem;">
 										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img1.jpg}"
+											th:src="@{products.itemPhotoLocation}"
 											class="card-img-top" alt="..."></a>
 										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
+											<p th:text="${products.name}"></p>
+											<p th:text="${products.price}">
 												<i class="fa fa-dollar"></i> 999
-											</p>
-										</div>
-									</div>
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img2.jpg}"
-											class="card-img-top" alt="..."></a>
-										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
-												<i class="fa fa-dollar"></i> 255
-											</p>
-										</div>
-									</div>
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img3.jpg}"
-											class="card-img-top" alt="..."></a>
-										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
-												<i class="fa fa-dollar"></i> 444
-											</p>
-										</div>
-									</div>
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img4.jpg}"
-											class="card-img-top" alt="..."></a>
-										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
-												<i class="fa fa-dollar"></i> 598
-											</p>
-										</div>
-									</div>
-
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img6.jpg}"
-											class="card-img-top" alt="..."></a>
-										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
-												<i class="fa fa-dollar"></i> 598
-											</p>
-										</div>
-									</div>
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img7.jpg}"
-											class="card-img-top" alt="..."></a>
-										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
-												<i class="fa fa-dollar"></i> 598
-											</p>
-										</div>
-									</div>
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="@{/resources/images/product-img8.jpg}"
-											class="card-img-top" alt="..."></a>
-										<div class="card-body">
-											<p>Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB
-												DDR3</p>
-											<p>
-												<i class="fa fa-dollar"></i> 598
 											</p>
 										</div>
 									</div>
@@ -289,12 +215,14 @@
 						<h5 class="modal-title">Profile Photo</h5>
 					</div>
 					<div class="modal-body">
-						<form id="editForm" th:action="@{/home}" method="post">
-							<div class="form-group">
-								<input type="file" class="custom-file-input"
+						<form id="editForm" enctype="multipart/form-data"
+							th:object="${member}" th:action="@{/ChangeProfilePhoto}"
+							method="post">
+							<div class="form-group ">
+								<input type="hidden" th:field="*{id}" /> <input type="file"
+									class="custom-file-input" name="profilePhoto"
 									id="inputGroupFile02"> <label class="custom-file-label"
-									for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload
-									Profile</label>
+									for="inputGroupFile02">Upload Profile</label>
 							</div>
 						</form>
 					</div>
@@ -312,20 +240,23 @@
 						<h5 class="modal-title">Change Your Name</h5>
 					</div>
 					<div class="modal-body">
-						<form id="editForm" th:action="@{/home}" method="post">
+						<form id="editForm" th:action="@{/ChangeProfileName}"
+							method="post" th:object="${member}">
 							<div class="form-group">
 								<div class="form-group">
-									<label>Your Name</label> <input type="text"
-										class="form-control" placeholder="Enter Your  Name">
+									<input type="hidden" th:field="*{id}" /> <label>Your
+										Name</label> <input type="text" class="form-control"
+										th:field="*{name}" placeholder="Enter Your  Name">
 								</div>
-								
+
+							</div>
+							<div class="modal-footer">
+								<button id="saveBtn" class="btn btn-success">Save</button>
 							</div>
 						</form>
 					</div>
 
-					<div class="modal-footer">
-						<button id="saveBtn" class="btn btn-success">Save</button>
-					</div>
+
 				</div>
 			</div>
 		</div>
@@ -336,24 +267,28 @@
 						<h5 class="modal-title">Change Password</h5>
 					</div>
 					<div class="modal-body">
-						<form id="editForm" th:action="@{/home}" method="post">
+						<form id="editForm" th:action="@{/ChangeProfilePassword}"
+							th:object="${member}" method="post">
 							<div class="form-group">
 								<div class="form-group">
-									<label>Correct Password</label> <input type="password"
+									<input type="hidden" th:field="*{id}" /> <label>Correct
+										Password</label> <input type="password" name="oldPassword"
 										class="form-control my-1" placeholder="Enter Correct Password">
 									<label>New Password</label> <input type="password"
-										class="form-control my-1" placeholder="Enter New Password"><label>
-										New Password</label> <input type="password" class="form-control my-1"
-										placeholder="Enter New Password">
+										name="newPassword" class="form-control my-1"
+										placeholder="Enter New Password"><label> New
+										Password</label> <input type="password" name="confirm"
+										class="form-control my-1" placeholder="Enter New Password">
 								</div>
 
+							</div>
+							<div class="modal-footer">
+								<button id="saveBtn" class="btn btn-success">Save</button>
 							</div>
 						</form>
 					</div>
 
-					<div class="modal-footer">
-						<button id="saveBtn" class="btn btn-success">Save</button>
-					</div>
+
 				</div>
 			</div>
 		</div>
@@ -364,24 +299,28 @@
 						<h5 class="modal-title">Change Address</h5>
 					</div>
 					<div class="modal-body">
-						<form id="editForm" th:action="@{/home}" method="post">
+						<form id="editForm" th:action="@{/ChangeProfileAddress}"
+							th:object="${member}" method="post">
 							<div class="form-group">
 								<div class="form-group">
-									<label>Street</label> <input type="text" class="form-control my-1"
-										placeholder="Enter Your  Street"> <label>Township</label>
-									<input type="text" class="form-control my-1"
+									<input type="hidden" th:field=*{id} /> <label>Street</label> <input
+										type="text" th:field="*{address.street}"
+										class="form-control my-1" placeholder="Enter Your  Street">
+									<label>Township</label> <input type="text"
+										th:field="*{address.township}" class="form-control my-1"
 										placeholder="Enter Your  Township"> <label>City</label>
-									<input type="text" class="form-control my-1"
-										placeholder="Enter Your  City">
+									<input type="text" th:field="*{address.city}"
+										class="form-control my-1" placeholder="Enter Your  City">
 								</div>
 
+							</div>
+							<div class="modal-footer">
+								<button id="saveBtn" class="btn btn-success">Save</button>
 							</div>
 						</form>
 					</div>
 
-					<div class="modal-footer">
-						<button id="saveBtn" class="btn btn-success">Save</button>
-					</div>
+
 				</div>
 			</div>
 		</div>

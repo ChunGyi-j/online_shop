@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 @Data
@@ -31,6 +32,8 @@ public class Shop implements Serializable {
 	private String shopProfileLocation;
 	private String shopLogoLocation;
 	private String contact;
+	@OneToOne
+	private Account account;
 	@OneToMany
 	private List<Item> item;
 	@Embedded
@@ -148,5 +151,15 @@ public class Shop implements Serializable {
 	public void setItem(List<Item> item) {
 		this.item = item;
 	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	
 	
 }

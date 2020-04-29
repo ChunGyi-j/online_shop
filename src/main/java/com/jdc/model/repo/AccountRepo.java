@@ -6,5 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.jdc.model.entity.Account;
 @Repository
 public interface AccountRepo extends JpaRepository<Account, Long>{
+	
+	Account  findByEmail(String email);
+	
 
 }

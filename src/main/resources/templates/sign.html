@@ -23,10 +23,10 @@
 							onclick="register()"><i class="mr-5"><i class="mr-1"></i></i>Register</a>
 					</div>
 				</div>
-				<form id="login" th:action="@{/login}" class="input-group">
-					<input type="text" class="input-field" placeholder="User Name"
+				<form id="login" th:action="@{/doLogin}" class="input-group" method="post">
+					<input type="text" class="input-field" placeholder="User Name" name="email"
 						required> <input type="text" class="input-field"
-						placeholder="Enter Password" required>
+						placeholder="Enter Password" name="password" required>
 						
 					<button type="submit" class="submit-btn btn btn-warning mt-4">Log In</button>
 				</form>
