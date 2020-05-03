@@ -156,15 +156,15 @@
 							</div>
 
 							<div class="tab-pane" role="tabpanel" id="recentsell">
-								<div class="row my-5" th:each="products:${sellProducts}">
-									<div class="card col-3 border-0 " style="width: 18rem;">
-										<a th:href="@{/itemdetail}"><img
-											th:src="${products.itemPhotoLocation}"
+								<div class="row my-5">
+									<div class="card col-3 border-0 " style="width: 12rem;"  th:each="products:${sellProducts}">
+										<a th:href="@{/itemdetail}"><img style="width: 12rem; height: 150px;"
+											th:src="@{${products.itemPhotoLocation}}"
 											class="card-img-top" alt="..."></a>
 										<div class="card-body">
 											<p th:text="${products.name}"></p>
 											<p th:text="${products.price}">
-												<i class="fa fa-dollar"></i> 999
+												<i class="fa fa-dollar"></i> 
 											</p>
 										</div>
 									</div>

@@ -13,5 +13,7 @@ public interface AccountService {
 	Account editMemberProfileName(Account account);
 	Account editMemberProfilePassword(Account account,String newPassword);
     Boolean samePassword(Account account,String oldPassword);
+    Account findByEmail(String email);
+    
 
 }

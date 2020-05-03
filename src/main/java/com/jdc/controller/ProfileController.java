@@ -75,4 +75,8 @@ public class ProfileController {
 		 AccountService.createAccount(account);
 		 return "redirect:/MemberProfile";
 	}
+	@GetMapping("/AdminProfile")
+	public String adminProfile() {
+		return "adminProfile";
+	}
 }

@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ShopRepo extends JpaRepository<Shop,Long> {
+	
+	Shop findByAccountEmail(String email);
+
 
 
 }

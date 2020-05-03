@@ -97,6 +97,13 @@ public class AccountServiceImp implements AccountService{
 		account.setPassword(encoder.encode(newPassword));
 		return accountRepo.save(account);
 	}
+
+	@Override
+	public Account findByEmail(String email) {
+		
+		return accountRepo.findByEmail(email);
+		
+	}
 	
 
 }

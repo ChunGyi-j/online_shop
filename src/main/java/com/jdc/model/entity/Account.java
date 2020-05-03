@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,6 +24,7 @@ public class Account implements Serializable {
 	private String email;
 	private String password;
 	private Boolean enable;
+	@Enumerated(EnumType.STRING)
 	private Role role;
 	private String profilephotoName;
 	private String profilephotoLocation;
@@ -101,9 +104,6 @@ public class Account implements Serializable {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
-
-
 
 	public enum Role {
 		ROLE_ADMIN {
