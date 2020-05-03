@@ -1,10 +1,8 @@
 package com.jdc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,7 +38,7 @@ public class HomeController {
 			model.addAttribute("items", itemService.findTopItem());
 			return "home";
 		}
-		System.out.println(account.getRole());
+		
 		if (account.getRole().toString().equals("Admin")) {
 			return "adminHome";
 		}

@@ -34,8 +34,6 @@ public class Shop implements Serializable {
 	private String contact;
 	@OneToOne
 	private Account account;
-	@OneToMany
-	private List<Item> item;
 	@Embedded
 	private Address address;
 
@@ -142,14 +140,6 @@ public class Shop implements Serializable {
 
 	public void setContact(String contact) {
 		this.contact = contact;
-	}
-
-	public List<Item> getItem() {
-		return item;
-	}
-
-	public void setItem(List<Item> item) {
-		this.item = item;
 	}
 
 	public Account getAccount() {

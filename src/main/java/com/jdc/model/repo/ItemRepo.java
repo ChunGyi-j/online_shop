@@ -11,6 +11,7 @@ import com.jdc.model.entity.Item;
 public interface ItemRepo extends JpaRepository<Item, Long>{
 	
 	List<Item> findByAccountId(Long id);
+
 	
 	
 }

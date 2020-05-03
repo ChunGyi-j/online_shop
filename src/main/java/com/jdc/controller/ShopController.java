@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.jdc.model.entity.Account;
 import com.jdc.model.entity.Shop;
 import com.jdc.services.AccountService;
-import com.jdc.services.ItemService;
 import com.jdc.services.ShopService;
 
 @Controller
@@ -18,13 +17,13 @@ public class ShopController {
 	
 	private final ShopService shopservice;
 	private final AccountService accountService;
-	private final ItemService itemService;
+
 	
-	public ShopController(ShopService shopservice,ItemService itemService,AccountService accountService) {
+	public ShopController(ShopService shopservice,AccountService accountService) {
 		super();
 		this.shopservice = shopservice;
 		this.accountService = accountService;
-		this.itemService = itemService;
+		
 	}
 
 	@GetMapping("/createshop")
@@ -32,9 +31,7 @@ public class ShopController {
 		if(accountService.loginAccount().getRole().toString().equals("Shopkeeper")) {
 			Account account = accountService.loginAccount();
 			Shop shop = shopservice.findByAccount(account.getEmail());
-			System.out.println(shop.getItem());
 			model.addAttribute("shopkeeper",shop);
-			model.addAttribute("items",shop.getItem());
 			return "ShopKeeper";
 		}
 		model.addAttribute("shop",new Shop());
