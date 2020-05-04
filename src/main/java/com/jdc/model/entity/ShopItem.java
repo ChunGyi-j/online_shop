@@ -8,10 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import lombok.Data;
-
 @Entity
-@Data
 public class ShopItem  implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -20,15 +17,15 @@ public class ShopItem  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 	@ManyToOne
-	private Shop Shop;
+	private Shop shop;
 	@ManyToOne
 	private Item item;
 	
 	public Shop getShop() {
-		return Shop;
+		return shop;
 	}
 	public void setShop(Shop shop) {
-		Shop = shop;
+		this.shop = shop;
 	}
 	public Item getItem() {
 		return item;
