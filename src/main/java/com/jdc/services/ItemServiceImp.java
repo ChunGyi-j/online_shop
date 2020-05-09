@@ -80,9 +80,16 @@ public class ItemServiceImp implements ItemService {
 	}
 
 	@Override
-	public List<Item> findProfileProdcuts(Long id) {
+	public List<Item> findByAccountId(Long id) {
 		return	itemRepo.findByAccountId(id);
 		
 	}
+
+	@Override
+	public Item findByItemId(Long id) {
+		return itemRepo.getOne(id);
+	}
+
+	
 
 }

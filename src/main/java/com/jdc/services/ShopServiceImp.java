@@ -57,5 +57,11 @@ public class ShopServiceImp implements ShopService {
 		return shop;
 	}
 
+
+	@Override
+	public Shop findByAccount(Account account) {
+		return shopRepo.findByAccount(account);
+	}
+
 	
 }

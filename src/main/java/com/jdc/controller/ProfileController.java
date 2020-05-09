@@ -30,7 +30,7 @@ public class ProfileController {
 	public String memberProfile(Model model) {
 		Account member = AccountService.loginAccount();
 		model.addAttribute("member", member);
-		model.addAttribute("sellProducts",itemService.findProfileProdcuts(member.getId()));
+		model.addAttribute("sellProducts",itemService.findByAccountId(member.getId()));
 		return "profile";
 	}
 
@@ -54,8 +54,6 @@ public class ProfileController {
 	public String editProfilePassword(@ModelAttribute Account member, @RequestParam String oldPassword,
 			@RequestParam String newPassword, @RequestParam String confirm) {
 		Account account = AccountService.findById(member.getId());
-
-		
 		/*
 		 * if(!AccountService.samePassword(account, oldPassword)) {
 		 * System.out.println("mar"); return "redirect:/MemberProfile"; }

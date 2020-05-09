@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.jdc.model.entity.Shop;
-import com.jdc.model.entity.ShopItem;
+import com.jdc.model.entity.Order;
 
 @Repository
-public interface ShopItemRepo extends JpaRepository<ShopItem,Long>{
-	List<ShopItem> findByShop(Shop shop);
+public interface OrderRepo extends JpaRepository<Order,Long>{
+	List<Order> findByShop(Shop shop);
 	
 	
 }

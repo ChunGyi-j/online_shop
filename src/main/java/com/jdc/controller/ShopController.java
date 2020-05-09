@@ -14,7 +14,7 @@ import com.jdc.model.entity.Item;
 import com.jdc.model.entity.Shop;
 import com.jdc.services.AccountService;
 import com.jdc.services.ItemService;
-import com.jdc.services.ShopItemService;
+import com.jdc.services.OrderService;
 import com.jdc.services.ShopService;
 
 @Controller
@@ -25,7 +25,9 @@ public class ShopController {
 	@Autowired
 	private  AccountService accountService;
 	@Autowired
-	private  ShopItemService shopItemService;
+	private  OrderService shopItemService;
+	@Autowired
+	private ItemService itemService;
 
 	
 	
@@ -35,10 +37,7 @@ public class ShopController {
 			Account account = accountService.loginAccount();
 			Shop shop = shopservice.findByAccount(account.getEmail());
 			model.addAttribute("shopkeeper",shop);
-			List<Item> items = shopItemService.find(shop);
-			for (Item item : items) {
-				System.out.println(item.getName());
-			}
+			model.addAttribute("items",itemService.findByAccountId(account.getId()));
 			return "ShopKeeper";
 		}
 		model.addAttribute("shop",new Shop());

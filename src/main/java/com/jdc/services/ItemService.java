@@ -10,6 +10,7 @@ public interface ItemService {
 	Item addItem(Item item);
     Item save ( MultipartFile files ,Item item);
     List<Item> findTopItem();
-    List<Item> findProfileProdcuts(Long id);
+    List<Item> findByAccountId(Long id);
+    Item findByItemId(Long id);
 
 }

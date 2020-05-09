@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			<div class="popularStores my-5">
-				<h3>Popular Shop</h3>
+				<h3 id="hometitle">Popular Shop</h3>
 				<hr />
 				<div class="popularStoresInner ">
 					<a href="#" class="btn btn-warning
@@ -64,7 +64,7 @@
 						class="btn btn-warning p-2">Shop9</a>
 				</div>
 			</div>
-			<h3>Top Selling Products</h3>
+			<h3 id="hometitle">Top Selling Products</h3>
 			<hr />
 			<div class="row my-5 ">
 				<div class="card col-3 border-0 " style="width: 18rem;">
@@ -156,11 +156,11 @@
 					</div>
 				</div>
 			</div>
-			<h3>Top Selling Products</h3>
+			<h3 id="hometitle">Top Selling Products</h3>
 			<hr />
 			<div class="row my-5">
 				<div class="card my-3 col-3 border-0 " style="width: 14rem" th:each="item:${items}">
-					<a th:href="@{/itemdetail}"><img  style="width: 14rem " height="200px"
+					<a th:href="@{itemdetail{id}(id=${item.id})}"><img  style="width: 14rem " height="200px"
 						th:src="@{${item.itemPhotoLocation}}"
 						class="card-img-top" alt="..."></a>
 					<div class="card-body">
@@ -172,7 +172,7 @@
 				</div>
 
 			</div>
-			<h3>2020 Fresh Stock</h3>
+			<h3 id="hometitle">2020 Fresh Stock</h3>
 			<hr />
 			<div id="carouselExampleCaptions" class="carousel slide my5"
 				data-ride="carousel">

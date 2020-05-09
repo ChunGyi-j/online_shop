@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class ShopItem  implements Serializable{
+public class Order  implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	

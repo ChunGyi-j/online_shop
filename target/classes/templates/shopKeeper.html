@@ -236,15 +236,15 @@
 				</div>
 			</div>
 
-			<div class="row my-5"  th:object="{items:${items}}">
-				<div class="card col-3 border-0 " style="width: 18rem;">
+			<div class="row my-5" >
+				<div class="card col-3 border-0 " style="width: 18rem;" th:each="item:${items}">
 					<a th:href="@{/itemdetail}"><img
-						th:src="@{items.itemPhotoLocation}"
+						th:src="@{${item.itemPhotoLocation}}"
 						class="card-img-top" alt="..."></a>
 					<div class="card-body">
-						<p th:text="${items.name}">Apple Macbook Pro MQ032 14.5' Inter Core i7 5550U 8GB DDR3</p>
-						<p th:text="${items.price}">
-							<i class="fa fa-dollar" ></i> 999
+						<p th:text="${item.name}"></p>
+						<p th:text="${item.price}">
+							<i class="fa fa-dollar" ></i>
 						</p>
 					</div>
 				</div>
