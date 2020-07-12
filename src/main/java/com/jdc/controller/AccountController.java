@@ -21,6 +21,7 @@ public class AccountController {
 
 	@GetMapping("/sign")
 	public String sign(Model model) {
+		
 		model.addAttribute("account", new Account());
 		return "sign";
 	}

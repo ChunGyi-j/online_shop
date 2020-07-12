@@ -3,11 +3,7 @@ package com.jdc.model.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -24,6 +20,8 @@ public class Item implements Serializable{
 	private int instock;
 	private int price;
 	private int itemRating;
+	@Lob
+	private String itemDetails;
 	private LocalDateTime sellDate;
 	private String itemPhotoName;
 	private String itemPhotoLocation;
@@ -91,12 +89,12 @@ public class Item implements Serializable{
 	public void setAccount(Account account) {
 		this.account = account;
 	}
-	
-	
-	
-	
-	
-	
-	
 
+	public String getItemDetails() {
+		return itemDetails;
+	}
+
+	public void setItemDetails(String itemDetails) {
+		this.itemDetails = itemDetails;
+	}
 }

@@ -17,21 +17,14 @@
 	<div layout:fragment="content">
 		<div class="my-4">j</div>
 		<div class="container">
-
-			<div class="text-right">
-				<span id="shopcart"><i
-					class=" fa fa-shopping-basket fa-2x  shopping-cart"></i><i
-					class="mx-2" th:text="${cartSize}"></i></span>
-			</div>
-
 			<!-- items -->
 			<div class="items">
 				<!-- single item -->
-				<div class="card mx-5 my-5 py-3"
-					style="max-width: 1300px; height: 300px" th:object="${item}">
+				<div class="card mx-auto my-5"
+					style="width: 850px; height: 300px" th:object="${item}">
 					<div class="row no-gutters">
-						<div class="col-md-4 ">
-							<img th:src="@{${item.itemPhotoLocation}}" class="card-img"
+						<div class="col-md-4">
+							<img th:src="@{${item.itemPhotoLocation}}" class="card-img"  style=" height: 300px"
 								alt="...">
 						</div>
 						<div class="col-md-8">
@@ -39,12 +32,9 @@
 								<a class="float-right button"><span
 									class="fa fa-info-circle" id="info"></span></a>
 								<h5 class="card-title" th:text="${item.name}"></h5>
-								<p class="card-text">This is a wider card with supporting
-									text below as a natural lead-in to additional content. This
-									content is a little bit longer.</p>
-								<p class="card-text">
-									<small class="text-muted">Last updated 3 mins ago</small>
-								</p>
+								
+								<h5 class="text-muted fa fa-dollar"  th:text = "${item.price}"></h5>
+								
 
 								<div class="mx-4 my-5">
 									<a th:href="@{addtocart{id}(id=${item.id})}"
@@ -57,54 +47,92 @@
 						</div>
 					</div>
 				</div>
-				<div class="card mb-5 mx-auto border-0">
+				<br/>
+				<div class="card mx-5 my-5 border-0" style="height: 30rem;" >
 					<div>
 						<div class="card-header bg-transparent border-0">
 							<ul class="nav nav-tabs  card-header-tabs">
 								<li class="nav-item "><a class="nav-link active border-top-0 border-right-0 border-left-0" role="tab" 
 									href="#description" data-toggle="tab">DESCRIPTION</a></li>
 								
- </a></li>
+
 								<li class="nav-item"><a class="nav-link border-top-0 border-right-0 border-left-0" role="tab"
 									href="#details" data-toggle="tab">DETAILS</a></li>
- </a></li>
+
 								<li class="nav-item"><a class="nav-link border-top-0 border-right-0 border-left-0" role="tab"
 									href="#reviews" data-toggle="tab">REVIEWS</a></li>
 								
 							</ul>
 							<hr/>
 						</div>
-						<div class="card-body border-0 ">
-							<div class="tab-content   mt-3">
+						<div class="card-body border-1 p-2" style="height: 28rem;">
+							<div class="tab-content">
 								<div class="tab-pane  active" role="tabpanel"
 									id="description">
 									<div class="container ">
-										<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	 </h5>
+										<h4 th:text="${item.itemDetails}"></h4>
 									</div>
 								</div>
 
-								<div class="tab-pane " role="tabpanel" id="details">
+								<div class="tab-pane " role="tabpanel" id="details" >
 									<div class="container ">
 										<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	 </h5>
 									</div>
 								</div>
 
 								<div class="tab-pane" role="tabpanel" id="reviews">
-									<div class="row my-5">
-										<div class="card col-3 border-0 " style="width: 12rem;"
-											th:each="products:${sellProducts}">
-											<a th:href="@{/itemdetail}"><img
-												style="width: 12rem; height: 150px;"
-												th:src="@{${products.itemPhotoLocation}}"
-												class="card-img-top" alt="..."></a>
-											<div class="card-body">
-												<p th:text="${products.name}"></p>
-												<p th:text="${products.price}">
-													<i class="fa fa-dollar"></i>
-												</p>
+										<div class="row">
+											<div class="col-md-6 ">
+
+													<div class="card  border-0 col-md-12"
+														 th:object="${item}">
+														<div class="row">
+															<div class="col-md-2">
+																<img th:src="@{${item.itemPhotoLocation}}"  class="card-img rounded-circle border"
+																	 alt="...">
+															</div>
+															<div class="col-md-10">
+																<div><h5>Title</h5></div>
+																<div>aldkf</div>
+																<div>review message</div>
+															</div>
+														</div>
+														<hr>
+													</div>
+													<div class="card my-2  border-0 col-md-12"
+														 th:object="${item}">
+														<div class="row">
+															<div class="col-md-2">
+																<img th:src="@{${item.itemPhotoLocation}}"  class="card-img rounded-circle border"
+																	 alt="...">
+															</div>
+															<div class="col-md-10">
+																<div><h5>Title</h5></div>
+																<div>dfa</div>
+																<div>review messagelormqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</div>
+															</div>
+														</div>
+													</div>
+
+											</div>
+											<div class="col-md-1"></div>
+											<div class="col-md-5">
+												<form th:action="@{/reviews}" method="post"  th:object="${review}">
+													<div class="form-row">
+														<input type="hidden" th:object="${item}">
+														<div class="form-group col-md-12">
+															<label >Write Review</label>
+															<textarea type="text" class="form-control"th:field="*{message}"
+																	  placeholder="Message" required="required"></textarea>
+														</div>
+														<div>
+															<button class="btn btn-outline-warning" type="submit">Send</button>
+
+														</div>
+													</div>
+												</form>
 											</div>
 										</div>
-									</div>
 								</div>
 								
 								

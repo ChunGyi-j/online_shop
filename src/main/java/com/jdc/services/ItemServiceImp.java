@@ -55,22 +55,18 @@ public class ItemServiceImp implements ItemService {
 		String replaceName = newName.replace(":", "-");
 		String imagePath = nginxLocation.concat(replaceName);
 
-		Item i = new Item();
-		i.setAccount(a);
-		i.setCategory(item.getCategory());
-		i.setInstock(item.getInstock());
-		i.setPrice(item.getPrice());
-		i.setSellDate(LocalDateTime.now());
-		i.setId(item.getId());
-		i.setItemPhotoName(replaceName);
-		i.setItemPhotoLocation(imagePath);
-		i.setName(item.getName());
+
+		item.setItemRating(0);
+		item.setAccount(a);
+		item.setSellDate(LocalDateTime.now());
+		item.setItemPhotoLocation(imagePath);
+		item.setItemPhotoName(replaceName);
 		try {
 			files.transferTo(Paths.get(imageBaseDir).resolve(replaceName));
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
 		}
-		return itemRepo.save(i);
+		return itemRepo.save(item);
 
 	}
 

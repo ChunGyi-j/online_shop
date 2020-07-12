@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.jdc.model.entity.Reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,14 +49,14 @@ public class ItemController {
 	public String item(Model model) {
 		model.addAttribute("item", new Item());
 		model.addAttribute("categories", categoryService.findAll());
-		return "addItem";
+		return "addItems";
 	}
 
 	@PostMapping("/additem")
 	public String additem(@RequestParam MultipartFile files, Item item, BindingResult result)
 			throws IllegalStateException, IOException {
 		if (result.hasErrors()) {
-			return "/additem";
+			return "/additems";
 		}
 
 		itemService.save(files, item);
@@ -65,6 +66,7 @@ public class ItemController {
 	@GetMapping("itemdetail{id:\\d+}")
 	public String findProductsById(@PathVariable(name = "id") Long id, Model model, HttpServletRequest request) {
 		HttpSession session = request.getSession(false);
+		model.addAttribute("review",new Reviews());
 		if (session != null) {
 			model.addAttribute("cartSize", session.getAttribute("cartSize"));
 		}
